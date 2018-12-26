@@ -1,1 +1,50 @@
 include ./_includes/html.pug
+
+.profile
+  .block
+    img.profile__photo(src="/files/avatar-dev.png", alt="Brian Walker Photo")
+    .profile__title.profile__title--name: span 
+      | Brian Walker
+    .profile__text.profile__text--job
+      | Web Developer
+
+  .block
+    h1.profile__title: span Profile
+    p.profile__text 
+      | 27-yer old web developer
+      | from Colorado Spring with
+      | 5+ years of work experience
+      | in various fields.
+
+  .block
+    h1.profile__title: span Contact
+    p.profile__text 
+      | 123-456-7890
+    p.profile__text.profile__text--division
+      | 012-345-6789
+    p.profile__text.profile__text--division
+      | 1490 General Woods.
+      | Colorado Springs
+    p.profile__text
+      | brianwalker.co
+    p.profile__text
+      | mail@brianwalker.com
+
+  .block
+    h1.profile__title: span Skill
+    .skill
+      .skill__name Front End
+      .skill__bar
+        .skill__level(style="width: 80%")
+
+    .skill
+      .skill__name Back End
+      .skill__bar
+        .skill__level(style="width: 95%")
+
+    .skill
+      .skill__name Writing
+      .skill__bar
+        .skill__level(style="width: 85%")
+
+.Curricullum
