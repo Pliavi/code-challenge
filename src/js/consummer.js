@@ -41,7 +41,7 @@ const createExpOrEdu = ({ name, date, description }) => {
   return exp;
 };
 
-removeLoading = async () => {
+const removeLoading = async () => {
   $loading = getByRef("loading");
   $loading.style.background = "transparent";
   $loading.style.color = "transparent";
@@ -51,12 +51,21 @@ removeLoading = async () => {
   }, 500);
 };
 
+const getProfileImage = async link => {
+  const res = await fetch(link);
+  const type = res.headers.get("content-type");
+  if (type.indexOf("image/") === "0") {
+    return link;
+  }
+  return "./img/avatar-dev.png";
+};
+
 (async () => {
   const res = await fetch("http://www.mocky.io/v2/5a5e38f3330000b0261923a5");
   const profile = (await res.json()).profile;
 
   setByRef("image", {
-    src: profile.image,
+    src: await getProfileImage(profile.image),
     alt: `${profile.name} photo`
   });
   setByRef("name", {
