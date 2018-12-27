@@ -10,11 +10,11 @@ gulp.task("copy", cb => {
   pump(
     [
       gulp.src("src/img/*"),
-      gulp.dest("dest/img"),
+      gulp.dest("dist/img"),
       gulp.src("src/css/**/*.css"),
-      gulp.dest("dest/css"),
+      gulp.dest("dist/css"),
       gulp.src("src/js/**/*.js"),
-      gulp.dest("dest/js")
+      gulp.dest("dist/js")
     ],
     cb
   );
@@ -28,7 +28,7 @@ gulp.task("styl", cb => {
       gulp.src("src/css/main.styl"),
       styl(),
       postcss(plugins),
-      gulp.dest("dest/css")
+      gulp.dest("dist/css")
     ],
     cb
   );
@@ -39,7 +39,7 @@ gulp.task("pug", cb => {
     [
       gulp.src(["src/**/*.pug", "!src/_includes/**/*"]),
       pug(),
-      gulp.dest("dest")
+      gulp.dest("dist")
     ],
     cb
   );
