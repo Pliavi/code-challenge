@@ -6,9 +6,7 @@
  - Stylus
 
 # Como rodar
-O resultado vai para uma pasta `dist`, ao utilizar o comando  
-`gulp`  
-ou   
-`yarn dev`
+O resultado vai para uma pasta `dist`, ao utilizar os comandos  
+`gulp`, `yarn dev` ou `npm run dev`
 
-Ambos iniciarão um watcher na pasta 'src'
+Todos iniciarão um watcher na pasta 'src'
