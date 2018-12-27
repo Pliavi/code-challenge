@@ -52,12 +52,16 @@ const removeLoading = async () => {
 };
 
 const getProfileImage = async link => {
-  const res = await fetch(link);
-  const type = res.headers.get("content-type");
-  if (type.indexOf("image/") === "0") {
-    return link;
+  try {
+    let res = await fetch(link);
+    const type = res.headers.get("content-type");
+    if (type.indexOf("image/") === 0) {
+      return link;
+    }
+    return "./img/avatar-dev.png";
+  } catch (e) {
+    return "./img/avatar-dev.png";
   }
-  return "./img/avatar-dev.png";
 };
 
 (async () => {
