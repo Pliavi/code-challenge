@@ -2,6 +2,21 @@ body
   margin: 0
   font-family: 'Montserrat', sans-serif
   display: flex
+  align-items: stretch
+  overflow: hidden
+
+.loading
+  display: flex
+  position: fixed
+  width: 100%
+  height: 100%
+  background: #000
+  color: #fff
+  align-items: center
+  justify-content: center
+  font-size: 2rem
+  font-weight: bold
+  transition: all 500ms 
 
 @require './core/scrollbar'
 @require './parts/profile';
